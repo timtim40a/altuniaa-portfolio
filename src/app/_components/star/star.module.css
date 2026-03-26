@@ -1,2 +1,11 @@
-.container {
+.star {
+    display: inline-block;
+    line-height: 1;
+    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+}
+
+.trail {
+    position: absolute;
+    left: -150px;
+    top: -32px;
 }

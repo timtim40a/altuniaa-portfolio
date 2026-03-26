@@ -8,6 +8,9 @@ export default function Header() {
                 <h1 className={styles.title}>Alona Altunina</h1>
                 <Star />
             </div>
+            <div className={styles.starContainer}>
+                <Star trail={true} />
+            </div>
         </header>
     );
 }
