@@ -1,0 +1,56 @@
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: var(--nav-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    z-index: 100;
+    pointer-events: none;
+    background-color: #380048;
+}
+
+.link {
+    pointer-events: all;
+    display: block;
+    background: var(--nav-bg);
+    color: var(--text);
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    padding: 0.6rem 1rem;
+    text-align: right;
+    border-left: 3px solid var(--nav-border);
+    border-top: 1px solid var(--nav-border);
+    border-bottom: 1px solid var(--nav-border);
+    border-radius: 4px 0 0 4px;
+
+    /* Default: pushed in (tab edge flush with viewport right) */
+    transform: translateX(0px);
+    box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.4);
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.link:hover {
+    transform: translateX(-8px);
+    background: var(--nav-bg-active);
+}
+
+/* Active: pulled out like a physical bookmark tab */
+.active {
+    background: var(--nav-bg-active);
+    transform: translateX(-24px);
+    box-shadow: -4px 3px 12px rgba(0, 0, 0, 0.6);
+    border-left-width: 4px;
+    font-weight: 500;
+}
+
+.active:hover {
+    transform: translateX(-24px);
+}
