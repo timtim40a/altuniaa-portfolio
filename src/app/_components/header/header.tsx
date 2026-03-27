@@ -6,10 +6,9 @@ export default function Header() {
         <header className={styles.container}>
             <div className={styles.panel}>
                 <h1 className={styles.title}>Alona Altunina</h1>
-                <Star />
-            </div>
-            <div className={styles.starContainer}>
-                <Star trail={true} />
+                <div className={styles.starContainer}>
+                    <Star trail={true} />
+                </div>
             </div>
         </header>
     );
