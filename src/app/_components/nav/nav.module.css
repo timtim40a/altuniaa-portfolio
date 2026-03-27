@@ -22,7 +22,8 @@
     font-family: var(--font-display);
     font-size: 1.1rem;
     padding: 0.6rem 1rem;
-    text-align: right;
+    text-align: left;
+    width: calc(var(--nav-width) + 48px);
     border-left: 3px solid var(--nav-border);
     border-top: 1px solid var(--nav-border);
     border-bottom: 1px solid var(--nav-border);

@@ -17,6 +17,8 @@
     --font-display: "KyivType Titling", Georgia, serif;
     --font-cursive: "Niconne", cursive;
     --font-body: "Fira Mono", -apple-system, sans-serif;
+
+    --nav-width: 101px;
 }
 
 @media (prefers-color-scheme: dark) {
