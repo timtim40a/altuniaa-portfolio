@@ -1,2 +1,8 @@
+/* Footer styles */
+
 .container {
+    margin-top: auto;
+    display: flex;
+    justify-content: left;
+    padding: 2rem;
 }
