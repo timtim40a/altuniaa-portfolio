@@ -8,15 +8,21 @@
     display: flex;
     align-items: stretch;
     gap: 1rem;
-    padding: 1rem;
+    padding: 2rem 3rem;
+    /*width: 964px;*/
 
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 32px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    box-shadow: 0 0px 40px 3px #00000020;
+    /*, inset 0 0px 30px -25px #ffffff80*/
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
-    border: 0.2px solid rgba(255, 255, 255, 0.26);
+    border: 0.2px solid rgba(255, 255, 255, 0.2);
+}
+
+.panel h1 {
+    line-height: 0.75;
 }
 
 .starContainer {

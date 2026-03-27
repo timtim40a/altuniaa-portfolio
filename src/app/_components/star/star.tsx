@@ -13,7 +13,7 @@ export default function Star({
     className = "",
     rotation = 0,
     trail = false,
-    trailSize = "11rem",
+    trailSize = "13rem",
 }: StarProps) {
     return (
         <>
