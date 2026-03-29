@@ -29,8 +29,9 @@
     --font-cursive: "Niconne", cursive;
     --font-body: "Fira Mono", -apple-system, sans-serif;
 
-    --nav-width: 101px;
+    --nav-width: 100px;
     --header-height: 200px;
+    --content-pad: clamp(1rem, 10vw, 10rem);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -90,6 +91,11 @@ h2 {
 a {
     color: inherit;
     text-decoration: none;
+}
+
+main {
+    flex: 1;
+    padding: 2rem var(--content-pad);
 }
 
 /* @media (prefers-color-scheme: dark) {

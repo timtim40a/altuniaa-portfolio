@@ -4,12 +4,11 @@
     margin-top: auto;
     display: flex;
     justify-content: left;
-    padding: 2rem;
+    padding: 1rem var(--content-pad);
     background-color: var(--bg-footer);
 }
 
 .list {
     list-style: none;
     gap: 1rem;
-    margin: 1rem;
 }
