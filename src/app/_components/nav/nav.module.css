@@ -12,6 +12,7 @@
     z-index: 100;
     pointer-events: none;
     background-color: var(--bg-nav);
+    box-shadow: -14px 0 30px -10px #38004880;
 }
 
 .link {
