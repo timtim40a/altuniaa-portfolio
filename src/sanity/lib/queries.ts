@@ -29,3 +29,25 @@ export const ALL_PHOTOS_QUERY = defineQuery(`
         takenAt
     }
 `);
+
+export const ALL_WORKS_QUERY = defineQuery(`
+    *[_type == "work"] | order(producedOn desc) {
+        title,
+        "slug": slug.current,
+        producedOn,
+        coverImage,
+        description,
+        collaborators
+    }
+`);
+
+export const WORK_BY_SLUG_QUERY = defineQuery(`
+    *[_type == "work" && slug.current == $slug][0] {
+        title,
+        "slug": slug.current,
+        producedOn,
+        coverImage,
+        description,
+        collaborators
+    }
+`);
