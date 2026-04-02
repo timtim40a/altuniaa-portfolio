@@ -8,7 +8,7 @@
     display: flex;
     align-items: stretch;
     gap: 1rem;
-    padding: 2rem 3rem;
+    padding: var(--header-pad);
     /*width: 964px;*/
 
     /* From https://css.glass */
@@ -23,6 +23,12 @@
 
 .panel h1 {
     line-height: 0.75;
+}
+
+@media (max-width: 768px) {
+    .panel h1 {
+        line-height: initial;
+    }
 }
 
 .starContainer {

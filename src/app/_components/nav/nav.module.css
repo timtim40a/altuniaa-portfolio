@@ -1,3 +1,4 @@
+/* ── Desktop (sidebar) ── */
 .nav {
     grid-column: 2;
     grid-row: 1 / -1;
@@ -31,7 +32,6 @@
     border-bottom: 1px solid var(--nav-border);
     border-radius: 4px 0 0 4px;
 
-    /* Default: pushed in (tab edge flush with viewport right) */
     transform: translateX(-10px);
     box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.4);
     transition:
@@ -45,7 +45,6 @@
     background: var(--nav-link-hover);
 }
 
-/* Active: pulled out like a physical bookmark tab */
 .active {
     background: var(--nav-link-hover);
     transform: translateX(calc(var(--nav-width) - 135px));
@@ -56,4 +55,110 @@
 
 .active:hover {
     transform: translateX(calc(var(--nav-width) - 135px));
+}
+
+/* burger button — hidden on desktop */
+.burger {
+    display: none;
+}
+
+.overlay {
+    display: none;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+    :root {
+        --nav-width: 200px;
+    }
+    /* burger button */
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 200;
+        background: #00000080;
+        border: none;
+        border-radius: 6px;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    .bar {
+        display: block;
+        width: 22px;
+        height: 3px;
+        background: var(--text);
+        border-radius: 2px;
+        transition:
+            transform 0.25s ease,
+            opacity 0.25s ease;
+    }
+
+    /* animate to X when open */
+    .barTop {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .barMid {
+        opacity: 0;
+    }
+    .barBot {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* dim overlay */
+    .overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        z-index: 149;
+    }
+
+    /* hide sidebar, slide in from right when open */
+    .nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 220px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        pointer-events: none;
+        z-index: 150;
+        justify-content: center;
+    }
+
+    .navOpen {
+        transform: translateX(0);
+        pointer-events: all;
+    }
+
+    /* reset the link slide-out effect on mobile */
+    .link {
+        width: 100%;
+        transform: none;
+        border-radius: 0;
+        border-left: 3px solid var(--nav-border);
+        border-top: none;
+        border-bottom: none;
+        text-align: left;
+        pointer-events: all;
+    }
+
+    .link:hover {
+        transform: none;
+    }
+
+    .active {
+        transform: none;
+    }
+
+    .active:hover {
+        transform: none;
+    }
 }
