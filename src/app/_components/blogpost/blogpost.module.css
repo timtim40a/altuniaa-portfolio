@@ -1,2 +1,16 @@
 .container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 1rem;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 0.2px solid var(--div-border);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.publishedAt {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin-bottom: 0.5rem;
 }
