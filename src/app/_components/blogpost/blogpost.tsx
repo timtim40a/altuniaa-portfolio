@@ -1,18 +1,38 @@
+import Image from "next/image";
+import type { SanityImageSource } from "@sanity/image-url";
+import { urlFor } from "@/sanity/lib/image";
 import styles from "./blogpost.module.css";
 
-export default function BlogPost() {
+export type BlogPostProps = {
+    title: string;
+    slug: string;
+    publishedAt: string;
+    coverImage: SanityImageSource;
+    excerpt: string;
+};
+
+export default function BlogPost({
+    title,
+    slug,
+    publishedAt,
+    coverImage,
+    excerpt,
+}: BlogPostProps) {
     return (
         <article className={styles.container}>
-            <img className={styles.coverImage} alt="Cover" />
+            <div className={styles.imageWrapper}>
+                <Image
+                    className={styles.coverImage}
+                    src={urlFor(coverImage).width(480).height(480).url()}
+                    alt={title}
+                    fill
+                />
+            </div>
             <div className={styles.textContent}>
-                <h2 className={styles.title}>Blog Post Title</h2>
-                <p className={styles.excerpt}>
-                    This is a short excerpt of the blog post. It gives a brief
-                    overview of the content to entice readers to click and read
-                    more.
-                </p>
+                <h2 className={styles.title}>{title}</h2>
+                <p className={styles.excerpt}>{excerpt}</p>
                 <span className={styles.publishedAt}>
-                    Published on: 2024-06-01
+                    Published on: {publishedAt}
                 </span>
             </div>
         </article>

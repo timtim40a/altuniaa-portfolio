@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 1rem;
     margin-top: 1rem;
     padding: 10px 10px;
     border-radius: 10px;
@@ -13,4 +13,39 @@
     font-size: 0.8rem;
     color: var(--text-dim);
     margin-bottom: 0.5rem;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 130px;
+    flex-shrink: 0;
+    aspect-ratio: 1 / 1;
+    padding-right: 0.5rem;
+    border-radius: 10px;
+}
+
+@media (max-width: 580px) {
+    .imageWrapper {
+        align-self: center;
+        width: clamp(20%, 80vw, 360px);
+    }
+
+    .container {
+        flex-direction: column;
+    }
+}
+
+.coverImage {
+    max-width: 130px;
+    object-fit: contain;
+}
+
+@media (max-width: 580px) {
+    .coverImage {
+        max-width: 360px;
+        max-height: 360px;
+        align-self: center;
+        justify-self: center;
+        aspect-ratio: 1 / 1;
+    }
 }

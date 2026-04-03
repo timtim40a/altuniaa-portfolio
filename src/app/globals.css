@@ -33,7 +33,7 @@
 
     --nav-width: 100px;
     --header-height: 200px;
-    --content-pad: clamp(0.2rem, 10vw, 10rem);
+    --content-pad: clamp(0.2rem, 18vw, 20rem);
     --header-pad: 2rem 3rem;
 }
 
