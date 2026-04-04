@@ -19,7 +19,6 @@
     width: 100%;
     aspect-ratio: 4 / 3;
     flex-shrink: 0;
-    border-radius: 10px;
 }
 
 @media (max-width: 580px) {
@@ -36,6 +35,8 @@
     align-self: center;
     justify-self: center;
     object-fit: contain;
+
+    border-radius: 10px;
 }
 
 @media (max-width: 580px) {
