@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { SanityImageSource } from "@sanity/image-url";
 import { urlFor } from "@/sanity/lib/image";
 import styles from "./blogpost.module.css";
@@ -21,7 +22,7 @@ export default function BlogPost({
     body,
 }: BlogPostProps) {
     return (
-        <article className={styles.container}>
+        <Link href={`/blog/${slug}`} className={styles.container}>
             <div className={styles.imageWrapper}>
                 <Image
                     className={styles.coverImage}
@@ -37,6 +38,6 @@ export default function BlogPost({
                     Published on: {publishedAt}
                 </span>
             </div>
-        </article>
+        </Link>
     );
 }
