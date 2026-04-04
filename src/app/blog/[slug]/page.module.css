@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: var(--header-pad);
+    border-radius: 10px;
+    border: 0.2px solid var(--div-border);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.publishedAt {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin-bottom: 0.5rem;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+@media (max-width: 580px) {
+    .imageWrapper {
+        align-self: center;
+        width: clamp(20%, 80vw, 360px);
+    }
+}
+
+.coverImage {
+    max-width: 800px;
+    max-height: 600px;
+
+    align-self: center;
+    justify-self: center;
+    object-fit: contain;
+}
+
+@media (max-width: 580px) {
+    .coverImage {
+        max-width: 360px;
+        max-height: 360px;
+    }
+}

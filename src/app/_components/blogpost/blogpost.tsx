@@ -9,6 +9,7 @@ export type BlogPostProps = {
     publishedAt: string;
     coverImage: SanityImageSource;
     excerpt: string;
+    body: any;
 };
 
 export default function BlogPost({
@@ -17,6 +18,7 @@ export default function BlogPost({
     publishedAt,
     coverImage,
     excerpt,
+    body,
 }: BlogPostProps) {
     return (
         <article className={styles.container}>
