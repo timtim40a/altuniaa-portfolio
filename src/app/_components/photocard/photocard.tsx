@@ -1,9 +1,11 @@
 import Image from "next/image";
 import styles from "./photocard.module.css";
+import { SanityImageSource, urlFor } from "@/sanity/lib/image";
+import { url } from "inspector";
 
 export type PhotocardProps = {
     title: string;
-    image: string;
+    image: SanityImageSource;
     alt?: string;
     location: string;
     takenAt: string;
@@ -23,7 +25,7 @@ function Photocard({
             <div className={styles.imageContainer}>
                 <Image
                     className={styles.image}
-                    src={image}
+                    src={urlFor(image).width(720).height(480).url()}
                     alt={alt}
                     fill
                     sizes="20vw 20vw"
