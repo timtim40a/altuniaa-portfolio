@@ -8,43 +8,43 @@ export default function Gallery() {
             <div className={styles.galleryGrid}>
                 <Photocard
                     title="Pianissimo"
-                    caption="A photo of me playing the piano."
+                    location="Kharkiv, Ukraine"
                     takenAt="2023-01-01"
                     img1="/images/test1.jpg"
                 />
                 <Photocard
                     title="Fortissimo"
-                    caption="A photo of me dancing."
+                    location="Kharkiv, Ukraine"
                     takenAt="2023-02-01"
                     img1="/images/test2.jpg"
                 />
                 <Photocard
                     title="Fortissimo"
-                    caption="A photo of me dancing."
+                    location="Kharkiv, Ukraine"
                     takenAt="2020-09-27"
                     img1="/images/test3.jpg"
                 />
                 <Photocard
                     title="Fortissimo"
-                    caption="A photo of me dancing."
+                    location="Kharkiv, Ukraine"
                     takenAt="2020-09-27"
                     img1="/images/test4.jpg"
                 />
                 <Photocard
                     title="Fortissimo"
-                    caption="A photo of me dancing."
+                    location="Kharkiv, Ukraine"
                     takenAt="2020-09-27"
                     img1="/images/test5.jpg"
                 />
                 <Photocard
                     title="Fortissimo"
-                    caption="A photo of me dancing."
+                    location="Kharkiv, Ukraine"
                     takenAt="2020-09-27"
                     img1="/images/test6.jpg"
                 />
                 <Photocard
                     title="Fortissimo"
-                    caption="A photo of me dancing."
+                    location="Kharkiv, Ukraine"
                     takenAt="2020-09-27"
                     img1="/images/test7.jpg"
                 />

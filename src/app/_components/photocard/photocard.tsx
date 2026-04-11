@@ -3,18 +3,18 @@ import styles from "./photocard.module.css";
 
 function Photocard({
     title,
-    caption,
+    location,
     takenAt,
     img1,
     alt = title,
-    expanded = false,
+    // expanded = false,
 }: {
     title: string;
-    caption: string;
+    location: string;
     takenAt: string;
     img1: string;
     alt?: string;
-    expanded?: boolean;
+    // expanded?: boolean;
 }) {
     return (
         <div className={styles.container}>
@@ -27,13 +27,11 @@ function Photocard({
                     sizes="20vw 20vw"
                 />
             </div>
-            <div className={styles.overlay}>{takenAt}</div>
-            {expanded && (
-                <div className={styles.textContainer}>
-                    <h3 className={styles.title}>{title}</h3>
-                    <p className={styles.caption}>{caption}</p>
-                </div>
-            )}
+            <div className={styles.overlay}>
+                {takenAt}
+                <h3 className={styles.title}>{title}</h3>
+                <p className={styles.location}>{location}</p>
+            </div>
         </div>
     );
 }
