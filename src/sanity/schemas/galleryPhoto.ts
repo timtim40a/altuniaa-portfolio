@@ -24,10 +24,9 @@ export const galleryPhoto = defineType({
             type: "string",
         }),
         defineField({
-            name: "caption",
-            title: "Caption",
+            name: "location",
+            title: "Location",
             type: "text",
-            rows: 2,
         }),
         defineField({
             name: "takenAt",

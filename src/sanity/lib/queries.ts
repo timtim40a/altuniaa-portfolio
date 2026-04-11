@@ -25,7 +25,7 @@ export const ALL_PHOTOS_QUERY = defineQuery(`
         title,
         image,
         alt,
-        caption,
+        location,
         takenAt
     }
 `);

@@ -7,17 +7,18 @@ export default function Home() {
                 <h2 className={styles.subtitle}>Welcome to my portfolio!</h2>
                 <aside className={styles.aside}>
                     <img
-                        src="/images/astronaut.jpg"
+                        src="/images/avatar.jpg"
                         alt="Astronaut"
                         className={styles.avatar}
                     />
                 </aside>
                 <p className={styles.text}>
-                    I'm a software developer with a passion for creating
-                    innovative and efficient solutions. This portfolio showcases
-                    some of my projects and skills. Feel free to explore and
-                    contact me if you'd like to collaborate or learn more about
-                    my work.
+                    Hi! My name is Alona, I'm a multidisciplinary artist
+                    combining playback theatre, songwriting and performance, and
+                    creative writing based in Brighton, UK. On this website you
+                    can find my portfolio and works. Don't hesitate to contact
+                    me if you're interested in collaboration! Text me … or drop
+                    an email to altuninaalyona@gmail.com Glad to have you here!
                 </p>
             </div>
             <div className={styles.sectionWrapper}>
