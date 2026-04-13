@@ -33,7 +33,7 @@ export default async function Home() {
                         photoClassName={styles.randomPhoto}
                     />
                 </div>
-                <div className={styles.featuredWorkContainer}>
+                {/* <div className={styles.featuredWorkContainer}>
                     <h2 className={styles.sectionTitle}>Featured Work</h2>
                     <img
                         src="/images/featured1.jpg"
@@ -43,7 +43,7 @@ export default async function Home() {
                     <p className={styles.text}>
                         Here are some of my recent projects that I'm proud of.
                     </p>
-                </div>
+                </div> */}
             </div>
         </div>
     );

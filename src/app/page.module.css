@@ -59,8 +59,8 @@
     }
 
     .sectionWrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        /* display: grid;
+        grid-template-columns: 1fr 1fr; */
         gap: 2rem;
     }
 
@@ -78,5 +78,24 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto;
         gap: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .randomPhotosContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .sectionTitle {
+        grid-column: 1;
+    }
+
+    .randomPhoto {
+        grid-row: auto;
+    }
+
+    .text {
+        font-size: smaller;
     }
 }
