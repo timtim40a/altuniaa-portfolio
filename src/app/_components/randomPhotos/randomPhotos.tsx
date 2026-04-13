@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useState, useEffect } from "react";
 import { urlFor, type SanityImageSource } from "@/sanity/lib/image";
 
 type Photo = {
@@ -13,16 +13,15 @@ type Photo = {
 
 type Props = {
     photos: Photo[];
-    className?: string;
     photoClassName?: string;
 };
 
-export default function RandomPhotos({ photos, className, photoClassName }: Props) {
-    const randomPhotos = useMemo(
-        () => [...photos].sort(() => Math.random() - 0.5).slice(0, 3),
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        [],
-    );
+export default function RandomPhotos({ photos, photoClassName }: Props) {
+    const [randomPhotos, setRandomPhotos] = useState<Photo[]>([]);
+
+    useEffect(() => {
+        setRandomPhotos([...photos].sort(() => Math.random() - 0.5).slice(0, 3));
+    }, [photos]);
 
     return (
         <>

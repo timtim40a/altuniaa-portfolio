@@ -31,6 +31,26 @@
 
 .sectionWrapper {
     align-self: center;
+    margin: 1rem 0;
+}
+
+.randomPhotosContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+}
+
+.randomPhoto {
+    grid-row: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.sectionTitle {
+    grid-column: 1 / -1;
 }
 
 @media (min-width: 769px) {
@@ -58,9 +78,5 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto;
         gap: 1rem;
-    }
-
-    .sectionTitle {
-        grid-column: 1 / -1;
     }
 }
