@@ -12,7 +12,8 @@ export default async function Works() {
             slug: "my-work",
             producedOn: "2023-01-01",
             coverImage: "/images/avatar.jpg",
-            description: "My photo as a placeholder.",
+            description:
+                "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderi.",
             collaborators: ["Tymur", "Alona"],
         },
         {
@@ -28,7 +29,7 @@ export default async function Works() {
     return (
         <div className={styles.container}>
             <h1>Works</h1>
-            <div className={styles.galleryGrid}>
+            <div className={styles.worksList}>
                 {works.map((work) => (
                     <Workcard key={work.slug} {...work} />
                 ))}

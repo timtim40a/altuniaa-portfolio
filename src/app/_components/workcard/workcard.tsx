@@ -35,14 +35,19 @@ function Workcard({
                 />
             </div>
             <div className={styles.textContainer}>
-                <h3 className={styles.title}>{title}</h3>
+                <h2 className={styles.title}>{title}</h2>
                 <p className={styles.description}>{description}</p>
-                <div className={styles.collaborators}>
-                    {collaborators.map((collaborator, index) => (
-                        <span key={index} className={styles.collaborator}>
-                            {collaborator}
-                        </span>
-                    ))}
+                <div className={styles.collaboratorsSection}>
+                    <span className={styles.collaboratorsLabel}>
+                        Together with:
+                    </span>
+                    <div className={styles.collaborators}>
+                        {collaborators.map((collaborator, index) => (
+                            <span key={index} className={styles.collaborator}>
+                                {collaborator}
+                            </span>
+                        ))}
+                    </div>
                 </div>
                 <span className={styles.producedOn}>
                     Produced on: {producedOn}
