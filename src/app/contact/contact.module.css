@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 600px;
+    background: var(--bg-contact-form);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid var(--div-border);
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.field label {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+}
+
+.field input,
+.field textarea {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--text);
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--div-border);
+    border-radius: 4px;
+    padding: 0.6rem 0.8rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.field input:focus,
+.field textarea:focus {
+    border-color: var(--accent);
+}
+
+.textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.successMessage {
+    font-size: 0.9rem;
+    color: #7ecf7e;
+}
+
+.errorMessage {
+    font-size: 0.9rem;
+    color: var(--accent);
+}
