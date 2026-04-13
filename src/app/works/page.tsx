@@ -5,26 +5,7 @@ import { ALL_WORKS_QUERY } from "@/sanity/lib/queries";
 import { work } from "@/sanity/schemas/work";
 
 export default async function Works() {
-    // const works: WorkcardProps[] = await client.fetch(ALL_WORKS_QUERY);
-    const works: WorkcardProps[] = [
-        {
-            title: "My work",
-            slug: "my-work",
-            producedOn: "2023-01-01",
-            coverImage: "/images/avatar.jpg",
-            description:
-                "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderi.",
-            collaborators: ["Tymur", "Alona"],
-        },
-        {
-            title: "My work",
-            slug: "my-work2",
-            producedOn: "2023-01-01",
-            coverImage: "/images/avatar.jpg",
-            description: "My photo as a placeholder.",
-            collaborators: ["Tymur", "Alona"],
-        },
-    ];
+    const works: WorkcardProps[] = await client.fetch(ALL_WORKS_QUERY);
 
     return (
         <div className={styles.container}>
