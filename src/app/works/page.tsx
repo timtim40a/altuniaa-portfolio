@@ -15,6 +15,14 @@ export default async function Works() {
             description: "My photo as a placeholder.",
             collaborators: ["Tymur", "Alona"],
         },
+        {
+            title: "My work",
+            slug: "my-work2",
+            producedOn: "2023-01-01",
+            coverImage: "/images/avatar.jpg",
+            description: "My photo as a placeholder.",
+            collaborators: ["Tymur", "Alona"],
+        },
     ];
 
     return (
