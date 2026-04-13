@@ -1,6 +1,10 @@
+import { client } from "@/sanity/client";
+import { ALL_PHOTOS_QUERY } from "@/sanity/lib/queries";
+import RandomPhotos from "./_components/randomPhotos/randomPhotos";
 import styles from "./page.module.css";
 
-export default function Home() {
+export default async function Home() {
+    const allPhotos = await client.fetch(ALL_PHOTOS_QUERY);
     return (
         <div className={styles.page}>
             <div className={styles.hero}>
@@ -8,7 +12,7 @@ export default function Home() {
                 <aside className={styles.aside}>
                     <img
                         src="/images/avatar.jpg"
-                        alt="Astronaut"
+                        alt="Alona's Photo"
                         className={styles.avatar}
                     />
                 </aside>
@@ -24,23 +28,12 @@ export default function Home() {
             <div className={styles.sectionWrapper}>
                 <div className={styles.randomPhotosContainer}>
                     <h2 className={styles.sectionTitle}>Random Photos</h2>
-                    <img
-                        src="/images/photo1.jpg"
-                        alt="Random Photo 1"
-                        className={styles.randomPhoto}
-                    />
-                    <img
-                        src="/images/photo2.jpg"
-                        alt="Random Photo 2"
-                        className={styles.randomPhoto}
-                    />
-                    <img
-                        src="/images/photo3.jpg"
-                        alt="Random Photo 3"
-                        className={styles.randomPhoto}
+                    <RandomPhotos
+                        photos={allPhotos}
+                        photoClassName={styles.randomPhoto}
                     />
                 </div>
-                <div className={styles.featuredWorkContainer}>
+                {/* <div className={styles.featuredWorkContainer}>
                     <h2 className={styles.sectionTitle}>Featured Work</h2>
                     <img
                         src="/images/featured1.jpg"
@@ -50,7 +43,7 @@ export default function Home() {
                     <p className={styles.text}>
                         Here are some of my recent projects that I'm proud of.
                     </p>
-                </div>
+                </div> */}
             </div>
         </div>
     );
