@@ -6,7 +6,7 @@ export type WorkcardProps = {
     title: string;
     slug: string;
     producedOn: string;
-    coverImage: SanityImageSource;
+    coverImage: SanityImageSource | string;
     description: string;
     collaborators: string[];
 };
@@ -24,7 +24,11 @@ function Workcard({
             <div className={styles.imageContainer}>
                 <Image
                     className={styles.image}
-                    src={urlFor(coverImage).width(720).height(480).url()}
+                    src={
+                        typeof coverImage === "string"
+                            ? coverImage
+                            : urlFor(coverImage).width(720).height(480).url()
+                    }
                     alt={title}
                     fill
                     sizes="20vw 20vw"
